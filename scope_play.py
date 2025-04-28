@@ -25,3 +25,14 @@ def parents():
     
 parents()
 print(f"The food in kitchen is {food}")
+
+def parent():
+    count = 0
+    def child():
+        nonlocal count
+        count += 1
+        print(f"count in child: {count}")
+    child()
+    child()
+    print(f"count in parent: {count}")
+parent()
